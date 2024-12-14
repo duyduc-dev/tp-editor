@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "declaration": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
+    // "types": ["vitest/globals"]
+  },
+  "include": [
+    "src",
+    "./auto-imports.d.ts",
+    "./src/styled.d.ts",
+    "./src/react-contextmenu.d.ts",
+    "./global.d.ts",
+    "./src/test/setup.ts",
+    "./authRemote.d.ts",
+    "configs",
+    "**/*.ts",
+    "**/*.tsx",
+    "vite.config.ts",
+    "tsconfig.app.json"
+  ],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
